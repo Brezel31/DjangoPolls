@@ -9,7 +9,7 @@ import app.views
 urlpatterns = [
     path('',
         app.views.PollListView.as_view(
-            queryset=Poll.objects.order_by('-pub_date')[:5],
+            queryset=Poll.objects.order_by('-pub_date')[:10],
             context_object_name='latest_poll_list',
             template_name='app/index.html',),
         name='home'),
